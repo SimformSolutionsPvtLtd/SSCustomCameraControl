@@ -1,4 +1,4 @@
-package com.customcamerafilters.app
+package com.customcamerafilters.app.activity
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -7,6 +7,9 @@ import android.media.ExifInterface
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
+import com.customcamerafilters.app.R.layout
+import com.customcamerafilters.app.adapter.FilterAdapter
+import com.customcamerafilters.app.interfaces.FilterClickListener
 import com.customcamerafilters.app.model.FilterModel
 import com.uvstudio.him.photofilterlibrary.PhotoFilter
 import kotlinx.android.synthetic.main.activity_filter.img_filtered_image
@@ -21,7 +24,7 @@ class FilterActivity : AppCompatActivity(), FilterClickListener {
 
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
-		setContentView(R.layout.activity_filter)
+		setContentView(layout.activity_filter)
 
 		intent.extras?.let {
 			if (it.containsKey(MainActivity.CAPTURED_IMAGE)) {

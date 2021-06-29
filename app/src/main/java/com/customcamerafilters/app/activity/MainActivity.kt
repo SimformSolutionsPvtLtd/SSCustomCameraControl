@@ -1,4 +1,4 @@
-package com.customcamerafilters.app
+package com.customcamerafilters.app.activity
 
 import android.Manifest
 import android.content.Intent
@@ -17,6 +17,8 @@ import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.customcamerafilters.app.R.layout
+import com.customcamerafilters.app.R.string
 import com.google.common.util.concurrent.ListenableFuture
 import kotlinx.android.synthetic.main.activity_main.camera_capture_button
 import kotlinx.android.synthetic.main.activity_main.img_switch_camera
@@ -39,7 +41,7 @@ class MainActivity : AppCompatActivity() {
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-		setContentView(R.layout.activity_main)
+		setContentView(layout.activity_main)
 
 		// Request camera permissions
 		if (allPermissionsGranted()) {
@@ -144,7 +146,7 @@ class MainActivity : AppCompatActivity() {
 
 	private fun getOutputDirectory(): File {
 		val mediaDir = externalMediaDirs.firstOrNull()?.let {
-			File(it, resources.getString(R.string.app_name)).apply { mkdirs() }
+			File(it, resources.getString(string.app_name)).apply { mkdirs() }
 		}
 		return if (mediaDir != null && mediaDir.exists())
 			mediaDir else filesDir
