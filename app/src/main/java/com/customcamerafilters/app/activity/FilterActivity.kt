@@ -8,6 +8,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.customcamerafilters.app.R.layout
+import com.customcamerafilters.app.R.string
 import com.customcamerafilters.app.adapter.FilterAdapter
 import com.customcamerafilters.app.interfaces.FilterClickListener
 import com.customcamerafilters.app.model.FilterModel
@@ -35,9 +36,9 @@ class FilterActivity : AppCompatActivity(), FilterClickListener {
 			}
 		}
 		val filterList = ArrayList<FilterModel>()
-		filterList.add(FilterModel(filterName = "None"))
+		filterList.add(FilterModel(filterName = getString(string.txt_none)))
 		for (i in 1 until 16) {
-			filterList.add(FilterModel(filterName = "filter " + i))
+			filterList.add(FilterModel(filterName = getString(string.txt_filter) + i))
 		}
 
 		filterAdapter = FilterAdapter(this, filterList, capturedImagePath, this)

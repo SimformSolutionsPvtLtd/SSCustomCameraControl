@@ -18,6 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:textAlignment="center"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="@id/img_filter"
         app:layout_constraintEnd_toEndOf="parent"

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CustomCameraFilters</string>
+    <string name="txt_jpg">.jpg</string>
+    <string name="txt_permission_not_granted">Permissions not granted by the user.</string>
+    <string name="txt_none">None</string>
+    <string name="txt_filter">filter \n</string>
 </resources>
