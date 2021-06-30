@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity() {
 		val photoFile = File(
 			outputDirectory,
 			SimpleDateFormat(FILENAME_FORMAT, Locale.US
-			).format(System.currentTimeMillis()) + getString(string.txt_jpg))
+			).format(System.currentTimeMillis()) + ".jpg")
 
 		// Create output options object which contains file + metadata
 		val outputOptions = ImageCapture.OutputFileOptions.Builder(photoFile).build()
@@ -172,7 +172,7 @@ class MainActivity : AppCompatActivity() {
 				startCamera()
 			} else {
 				Toast.makeText(this,
-					getString(string.txt_permission_not_granted),
+					"Permissions not granted by the user.",
 					Toast.LENGTH_SHORT).show()
 				finish()
 			}
