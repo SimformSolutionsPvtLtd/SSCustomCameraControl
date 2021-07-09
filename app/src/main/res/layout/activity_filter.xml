@@ -6,10 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".activity.FilterActivity">
 
-    <ImageView
-        android:id="@+id/img_filtered_image"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_filtered_image"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_filtered_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_filter_list"
@@ -28,6 +38,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_save"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/icon_save"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
