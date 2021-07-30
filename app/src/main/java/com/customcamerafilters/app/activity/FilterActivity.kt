@@ -19,6 +19,11 @@ import com.customcamerafilters.app.adapter.FilterAdapter
 import com.customcamerafilters.app.interfaces.FilterClickListener
 import com.customcamerafilters.app.model.FilterModel
 import com.uvstudio.him.photofilterlibrary.PhotoFilter
+import kotlinx.android.synthetic.main.activity_filter.constraint_layout_filtered_image
+import kotlinx.android.synthetic.main.activity_filter.img_filtered_image
+import kotlinx.android.synthetic.main.activity_filter.img_save
+import kotlinx.android.synthetic.main.activity_filter.progress_bar_add_filter
+import kotlinx.android.synthetic.main.activity_filter.recycler_view_filter_list
 import java.io.BufferedOutputStream
 import java.io.File
 import java.io.FileOutputStream

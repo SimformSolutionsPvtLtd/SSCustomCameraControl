@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger) ![](https://img.shields.io/badge/dynamic/xml?url=https://kotlinlang.org/&label=Kotlin&query=/&color=3399cc&prefix=v1.5.20&logo=kotlin) ![](https://img.shields.io/badge/dynamic/xml?url=https://kotlinlang.org/&label=API&query=/&color=5b39c6&prefix=22) ![](https://img.shields.io/badge/dynamic/xml?url=https://kotlinlang.org/&label=code%20quality&query=/&color=4BB543&prefix=A&logo=Codacy)
 
+![Alt text](camera_filter.gif) / ![](camera_filter.gif)
+
 # Getting Started
 Custom camera filter can capture image from camera and also pick image from gallery. After capturing image user can add filters from filter library. Custom camera filter has 15 filters. User can save image after applying filters.
 
